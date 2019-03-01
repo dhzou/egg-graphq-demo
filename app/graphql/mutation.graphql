@@ -1,5 +1,5 @@
 type Mutation {
-    # 阅文登录
-    userLogin(ywGuid: String!,ywKey: String!): MessageWithToken!
+    # 登录
+    userLogin(userName: String!,password: String!): MessageWithToken!
 
 }

@@ -11,7 +11,7 @@ class UserService extends Service {
    * @returns {Promise<*>}
    */
   async select(params) {
-    return await this.ctx.model.User.findOne({ where: { id: params.id } });
+   // return await this.ctx.model.User.findOne({ where: { id: params.id } });
   }
 
 

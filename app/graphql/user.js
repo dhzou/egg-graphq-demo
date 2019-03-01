@@ -4,15 +4,18 @@ exports.resolver = {
   Query: {
     async user(root, { id }, ctx) {
       const params = { id };
-      return await ctx.service.user.select(params);
+      return await {
+        id,
+        userName:"yux",
+        avatar: "yuxyuxyux"
+      };
     },
   },
   Mutation: {
-    async userLogin(root, { ywGuid, ywKey }, ctx) {
+    async userLogin(root, { userName, password }, ctx) {
       return await  {
         code:123,
-        msg:"nicee",
-        token:"nddd"
+        msg:"登录成功"
       }
     }
     }
