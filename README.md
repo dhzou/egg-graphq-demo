@@ -10,7 +10,7 @@ $ npm i
 ###  启动项目 
 ````
 $ npm run dev
-$ open localhost:7001
+$ open localhost:7001/graphql
 ````
 ### 连接mysql(无mysql，先行安装)
 ````
