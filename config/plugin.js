@@ -4,7 +4,7 @@
 /** @type Egg.EggPlugin */
 module.exports = {
   sequelize:{
-    enable: true,
+    enable: false, // 是否启动sequelize 连接数据库
     package: 'egg-sequelize',
   }
 }

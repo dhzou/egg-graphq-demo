@@ -6,7 +6,7 @@ exports.resolver = {
       const params = { id };
       return await {
         id,
-        userName:"yux",
+        nickName:"yux",
         avatar: "yuxyuxyux"
       };
     },

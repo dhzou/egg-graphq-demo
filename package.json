@@ -27,7 +27,9 @@
     "egg-mock": "^3.21.0",
     "eslint": "^5.13.0",
     "eslint-config-egg": "^7.1.0",
-    "webstorm-disable-index": "^1.2.0"
+    "webstorm-disable-index": "^1.2.0",
+    "mocha": "^5.2.0",
+    "chai": "^4.2.0"
   },
   "engines": {
     "node": ">=8.9.0"
@@ -39,6 +41,7 @@
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
+    "test-graphql": "mocha test/app/graphql/*.test.js",
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",

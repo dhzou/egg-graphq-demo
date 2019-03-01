@@ -352,3 +352,18 @@ module.exports = UserService;
    }
  }
  ````
+ - 单元测试
+   ````
+   采用graphql进行测试，模拟grapghql请求。目录如下
+   test
+   └── app
+       ├── controller
+       │   └── home.test.js
+       └── graphql
+           └── user.test.js
+   添加执行脚本  
+    "test-graphql": "mocha test/app/graphql/*.test.js",
+   npm run test-graphql
+   ````
+   
+   

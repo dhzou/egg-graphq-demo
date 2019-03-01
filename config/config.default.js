@@ -11,19 +11,18 @@ module.exports = appInfo => {
    * @type {Egg.EggAppConfig}
    **/
   const config = {
-     // mysql config
-    // sequelize: {
-    //   dialect: 'mysql',
-    //   dialectOptions: {
-    //     charset: 'utf8mb4',
-    //   },
-    //   host: 'localhost',
-    //   port: '3306',
-    //   database: 'graphql',
-    //   username: 'root',
-    //   password: '123456',
-    //   timezone: '+08:00'
-    // }
+    sequelize: {
+      dialect: 'mysql',
+      dialectOptions: {
+        charset: 'utf8mb4',
+      },
+      host: 'localhost',
+      port: '3306',
+      database: 'graphql',
+      username: 'root',
+      password: '123456',
+      timezone: '+08:00'
+    }
   };
 
   // use for cookie sign key, should change to your own and keep security
