@@ -1,8 +1,68 @@
-# egg
-## 快速入门
-<!-- 在此次添加使用文档 -->
-如需进一步了解，参见 [egg 文档][egg]。
+##快速开发
+
 ### 快速初始化项目
+````
+$ npm i egg-graphql-cli -g
+$ egg-graphql-cli  demo 
+$ cd demo
+$ npm i
+````
+###  启动项目 
+````
+$ npm run dev
+$ open localhost:7001
+````
+### 连接mysql(无mysql，先行安装)
+````
+ 1. config/plugin.js 
+   sequelize:{
+     enable: false,  ==> true // 是否启动sequelize 连接数据库
+     package: 'egg-sequelize',
+   } 
+ 2. config/ config.default.js, 修改设置对应的数据库
+     sequelize: {
+       dialect: 'mysql',
+       dialectOptions: {
+         charset: 'utf8mb4',
+       },
+       host: 'localhost',
+       port: '3306',
+       database: 'graphql',
+       username: 'root',
+       password: '123456',
+       timezone: '+08:00'
+     }       
+````
+
+### 编写model 对应数据库中的实体表
+````
+/app/model user.js
+const User = app.model.define('tableName',{});
+````
+### 定义graphql schema
+````
+  /app/graphql/  query.graphql 、mutation.graphql
+  
+  定义 type
+  /app/graphql/  obj.graphql
+````
+
+### 定义resolve
+````
+ /app/graphql/user.js
+````
+### 编写service curd
+
+````
+  /app/service/user.js
+````
+### 编写单元测试用例
+
+````
+  /test/ app/graphql/user.test.js
+````
+
+## 逐步搭建
 ````
 $ npm i egg-init -g
 $ egg-init egg-example --type=simple
@@ -85,7 +145,7 @@ flush privileges;
      }
  ````
  
-## GraphQL
+### GraphQL
 - 安装
 ````
 npm install apollo-server-koa
@@ -365,5 +425,3 @@ module.exports = UserService;
     "test-graphql": "mocha test/app/graphql/*.test.js",
    npm run test-graphql
    ````
-   
-   
