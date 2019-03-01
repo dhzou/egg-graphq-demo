@@ -1,7 +1,8 @@
 {
-  "name": "egg-graphql-demo",
-  "version": "1.0.0",
-  "description": "egg-graphql-demo",
+  "name": "{{projectName}}",
+  "version": "{{projectVersion}}",
+  "description": "{{projectDescription}}",
+  "author": "{{projectAuthor}}",
   "private": true,
   "egg": {
     "declarations": true
