@@ -1,0 +1,5 @@
+
+type Query {
+    #用户信息
+    user(id:Int!):UserInfo!,
+}

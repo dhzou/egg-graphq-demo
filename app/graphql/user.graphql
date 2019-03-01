@@ -1,0 +1,19 @@
+interface User {
+    id: ID! #id
+    nickName: String #昵称
+    avatar:String #头像
+
+}
+
+type UserInfo implements User {
+    id: ID! #id
+    nickName: String #昵称
+    avatar:String #头像
+
+}
+
+type MessageWithToken {
+    code:Int!
+    msg:String!
+    token:String!
+}
