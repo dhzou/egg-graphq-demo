@@ -184,7 +184,7 @@ type Query {
 }
 type Mutation {
     # 阅文登录
-    userLogin(ywGuid: String!,ywKey: String!): MessageWithToken!
+    userLogin(userName: String!,password: String!): MessageWithToken!
 }
 ````
 - 定义type 
@@ -214,14 +214,10 @@ type MessageWithToken {
     },
   },
   Mutation: {
-    async userLogin(root, { ywGuid, ywKey }, ctx) {
-      const params = {
-        ywGuid,
-        ywKey,
-      };
+    async userLogin(root, { userName, password }, ctx) {
       return await  {
         code:123,
-        msg:"nicee",
+        msg:"登录成功",
         token:"nddd"
       }
     },

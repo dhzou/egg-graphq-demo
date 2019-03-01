@@ -15,7 +15,8 @@ exports.resolver = {
     async userLogin(root, { userName, password }, ctx) {
       return await  {
         code:123,
-        msg:"登录成功"
+        msg:"登录成功",
+        token:"yuxyuxyuxy333"
       }
     }
     }
