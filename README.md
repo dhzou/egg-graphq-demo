@@ -3,7 +3,7 @@
 ### 快速初始化项目
 ````
 $ npm i egg-graphql-cli -g
-$ egg-graphql-cli  demo 
+$ egg-graphql-cli init demo 
 $ cd demo
 $ npm i
 ````
@@ -60,6 +60,8 @@ const User = app.model.define('tableName',{});
 
 ````
   /test/ app/graphql/user.test.js
+  
+  npm run test-graphql
 ````
 
 ## 逐步搭建
